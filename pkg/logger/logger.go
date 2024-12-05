@@ -52,7 +52,11 @@ func New(level string) *Logger {
 		},
 	}
 
-	logger := slog.New(slog.NewJSONHandler(os.Stdout, opts))
+	prettyHandlerOptions := PrettyHandlerOptions{
+		SlogOpts: *opts,
+	}
+	handler := NewPrettyHandler(os.Stdout, prettyHandlerOptions)
+	logger := slog.New(handler)
 
 	return &Logger{
 		logger: logger,
