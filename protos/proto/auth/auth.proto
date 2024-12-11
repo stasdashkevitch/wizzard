@@ -7,7 +7,7 @@ option go_package = "github.com/stasdashkevitch/protos/gen/go/auth;authv1";
 service Auth {
   rpc Register(RegisterRequest) returns (RegisterResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
-  rpc Logout(LogoutRequest) returns (LogoutRequest);
+  rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
 }
 
 message RegisterRequest {
@@ -25,6 +25,6 @@ message LoginRequest {
 
 message LoginResponse { string token = 1; }
 
-message LogoutRequest { string token = 1; }
+message IsAdminRequest { int64 user_id = 1; }
 
-message LogoutResponse { bool success = 1; }
+message IsAdminResponse { bool is_admin = 1; }
