@@ -19,7 +19,7 @@ message RegisterResponse { int64 user_id = 1; }
 
 message LoginRequest {
   string email = 1;
-  string passsword = 2;
+  string password = 2;
   int32 app_id = 3;
 }
 
