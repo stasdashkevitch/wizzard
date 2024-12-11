@@ -5,7 +5,6 @@ go 1.23.1
 require (
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	github.com/stasdashkevitch/wizzard/common v0.0.0-20241211170144-8cd90c968419
-	github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211190706-d29d5dab3990
 	google.golang.org/grpc v1.68.1
 )
 
@@ -13,6 +12,7 @@ require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/mdobak/go-xerrors v0.3.1 // indirect
+	github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211192709-d39be2de863a // indirect
 	golang.org/x/net v0.29.0 // indirect
 	golang.org/x/sys v0.25.0 // indirect
 	golang.org/x/text v0.18.0 // indirect

@@ -13,8 +13,8 @@ github.com/mdobak/go-xerrors v0.3.1 h1:XfqaLMNN5T4qsHSlLHGJ35f6YlDTVeINSYYeeuK4V
 github.com/mdobak/go-xerrors v0.3.1/go.mod h1:nIR+HMAJuj/uNqyp5+MTN6PJ7ymuIJq3UVs9QCgAHbY=
 github.com/stasdashkevitch/wizzard/common v0.0.0-20241211170144-8cd90c968419 h1:JRLzFbfr7AXAk2WuhhmdOOy/OLtJxvUlsF548OPDjSA=
 github.com/stasdashkevitch/wizzard/common v0.0.0-20241211170144-8cd90c968419/go.mod h1:hmutlDs9OnldROzMXJodtGBXxC6SSK9m2uCclUJll/I=
-github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211190706-d29d5dab3990 h1:g6bNP1NyC3Dc2Stbp2JoElyrh/7QaGtc/omGCPBHhgM=
-github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211190706-d29d5dab3990/go.mod h1:SZXXSnVC8PTGZGoOJEI4aBOMi047HoqgFzuPX3FgaNk=
+github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211192709-d39be2de863a h1:P+MMgDPWwnWDZZp5JuRE11WRGBHs8SAFDC1LIO9fR2w=
+github.com/stasdashkevitch/wizzard/protos v0.0.0-20241211192709-d39be2de863a/go.mod h1:SZXXSnVC8PTGZGoOJEI4aBOMi047HoqgFzuPX3FgaNk=
 golang.org/x/net v0.29.0 h1:5ORfpBpCs4HzDYoodCDBbwHzdR5UrLBZ3sOnUJmFoHo=
 golang.org/x/net v0.29.0/go.mod h1:gLkgy8jTGERgjzMic6DS9+SP0ajcu6Xu3Orq/SpETg0=
 golang.org/x/sys v0.25.0 h1:r+8e+loiHxRqhXVl6ML1nO3l1+oFoWbnlu2Ehimmi34=

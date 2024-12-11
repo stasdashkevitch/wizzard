@@ -100,10 +100,28 @@ func (s *serverAPI) Login(ctx context.Context, req *authv1.LoginRequest) (*authv
 	}, nil
 }
 
-func validateLogout(req *authv1.IsAdmin) error {
+func validateIsAdmin(req *authv1.IsAdminRequest) error {
 	if req.UserId == emptyValue {
-		if req.GetAppId() == emptyValue {
-			return status.Error(codes.InvalidArgument, "app_id is required")
+		if req.GetUserId() == emptyValue {
+			return status.Error(codes.InvalidArgument, "user_id is required")
 		}
 	}
+
+	return nil
+}
+
+func (s *serverAPI) IsAdmin(ctx context.Context, req *authv1.IsAdminRequest) (*authv1.IsAdminResponse, error) {
+	err := validateIsAdmin(req)
+	if err != nil {
+		return nil, err
+	}
+
+	isAdmin, err := s.auth.IsAdmin(ctx, req.UserId)
+	if err != nil {
+		return nil, status.Error(codes.Internal, "internal error")
+	}
+
+	return &authv1.IsAdminResponse{
+		IsAdmin: isAdmin,
+	}, nil
 }
