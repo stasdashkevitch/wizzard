@@ -23,6 +23,7 @@ type ILogger interface {
 	ErrorContext(ctx context.Context, msg string, args ...any)
 	Fatal(msg string, args ...any)
 	FatalContext(ctx context.Context, msg string, args ...any)
+	With(args ...any) ILogger
 }
 
 type Logger struct {
@@ -195,4 +196,8 @@ func (l *Logger) Fatal(msg string, args ...any) {
 func (l *Logger) FatalContext(ctx context.Context, msg string, args ...any) {
 	l.l.Log(ctx, LevelFatal, msg, args...)
 	os.Exit(1)
+}
+
+func (l *Logger) With(args ...any) ILogger {
+	return l.With(args...)
 }
