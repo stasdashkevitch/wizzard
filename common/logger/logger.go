@@ -199,5 +199,7 @@ func (l *Logger) FatalContext(ctx context.Context, msg string, args ...any) {
 }
 
 func (l *Logger) With(args ...any) ILogger {
-	return l.With(args...)
+	return &Logger{
+		l: l.l.With(args...),
+	}
 }
